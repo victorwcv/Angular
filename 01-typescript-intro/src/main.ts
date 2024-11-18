@@ -1,17 +1,18 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import "./style.css";
+import typescriptLogo from "./typescript.svg";
+import viteLogo from "/vite.svg";
+import { setupCounter } from "./counter.ts";
 // import './topics/01-basic-types.ts'
 // import './topics/02-object-interface.ts'
 // import  './topics/03-functions.ts'
 // import './topics/04-homework-types.ts'
 // import './topics/05-basic-destructuring.ts'
-import './topics/06-function-destructuring.ts'
+// import './topics/06-function-destructuring.ts'
+// import "./topics/07-import-export.ts";
+// import "./topics/08-classes.ts";
 
 
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -27,6 +28,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
