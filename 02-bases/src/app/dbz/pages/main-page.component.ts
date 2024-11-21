@@ -21,5 +21,8 @@ export class MainPageComponent {
     }
   ];
 
-  constructor() {}
+  onNewCharacter(character:Character):void {
+    console.log('main', character);
+    
+  }
 }
