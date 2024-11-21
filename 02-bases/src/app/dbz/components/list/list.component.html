@@ -10,6 +10,7 @@
   let isOdd = odd
   " 
   class="list-group-item"
+  [ngClass]="{'list-group-item-success' : isFirst}"
   >
 
     <span>{{i + 1}}</span>
