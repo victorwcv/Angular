@@ -20,7 +20,7 @@ export class AddCharacterComponent {
 
     if (this.character.name.length < 2) return;
 
-    this.onNewCharacter.emit(this.character);
+    this.onNewCharacter.emit({...this.character});
     
     // reset
     this.character.name = "";
