@@ -18,6 +18,6 @@
       {{ char.name }} : {{ char.power }}
       <span> {{ isFirst ? "soy el primero" : "" }} </span>
     </div>
-    <button class="btn btn-danger">x</button>
+    <button (click)="onDeleteCharacter(i)" class="btn btn-danger">x</button>
   </li>
 </ul> 
