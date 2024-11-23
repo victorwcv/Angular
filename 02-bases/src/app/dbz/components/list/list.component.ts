@@ -22,4 +22,5 @@ export class ListComponent {
     this.onDelete.emit(id);
     console.log({ id });
   }
+
 }
