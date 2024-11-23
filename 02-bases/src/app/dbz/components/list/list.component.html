@@ -3,7 +3,7 @@
 <ul class="list-group">
   <li
     *ngFor="
-      let char of characterList;
+      let character of characterList;
       let i = index;
       let isFirst = first;
       let isLast = last;
@@ -15,9 +15,9 @@
   >
     <div class="">
       <span>{{ i + 1 }}</span>
-      {{ char.name }} : {{ char.power }}
+      {{ character.name }} : {{ character.power }}
       <span> {{ isFirst ? "soy el primero" : "" }} </span>
     </div>
-    <button (click)="onDeleteCharacter(i)" class="btn btn-danger">x</button>
+    <button (click)="onDeleteCharacter(character.id)" class="btn btn-danger">x</button>
   </li>
 </ul> 
