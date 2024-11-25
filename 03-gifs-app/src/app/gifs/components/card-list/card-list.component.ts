@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './card-list.component.html'
 })
 export class CardListComponent {
-
+  
 }
