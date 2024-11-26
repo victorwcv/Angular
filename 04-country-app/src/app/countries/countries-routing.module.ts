@@ -22,12 +22,15 @@ const routes: Routes = [
   {
     path: 'by/:id',
     component: CountryPageComponent,
-  }
-]
+  },
+  {
+    path: '**',
+    redirectTo: 'by-capital',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  
 })
-export class CountriesRoutingModule { }
+export class CountriesRoutingModule {}
