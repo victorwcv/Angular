@@ -8,9 +8,18 @@
     ></shared-search-box>
   </div>
 
-  <hr class="mb-6"/>
+  <hr class="mb-6" />
 
   <div>
-    <div>Resultados</div>
+    <ul>
+      <li *ngFor="let country of countries" class="my-4">
+        <p class="text-xl font-semibold border-b-2 border-indigo-800">
+          {{ country.capital }}
+        </p>
+        <p>
+          <span class="font-bold">Poblacion:</span> {{ country.population }}
+        </p>
+      </li>
+    </ul>
   </div>
 </div>
