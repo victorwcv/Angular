@@ -1,0 +1,34 @@
+<div *ngIf="countries.length === 0; else table" class="text-center">
+  No hay paises que mostrar
+</div>
+
+<ng-template #table>
+  <table class="table-auto w-full p-4">
+    <thead class="border-b-2">
+      <tr>
+        <th class="px-2 py-1">#</th>
+        <th class="px-2 py-1">Bandera</th>
+        <th class="px-2 py-1">Nombre</th>
+        <th class="px-2 py-1">Capital</th>
+        <th class="px-2 py-1">Población</th>
+        <th class="px-2 py-1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of countries; let i = index">
+        <td class="py-1 text-center">{{ i + 1 }}</td>
+        <td class="py-1 text-center">
+          <img
+            [src]="item.flags.png"
+            [alt]="item.flags.alt"
+            class="w-8 h-auto m-auto"
+          />
+        </td>
+        <td class="py-1 text-center">{{ item.name.common }}</td>
+        <td class="py-1 text-center">{{ item.capital }}</td>
+        <td class="py-1 text-center">{{ item.population | number }}</td>
+        <td><a href="#" class="underline text-blue-600">Ver más</a></td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
