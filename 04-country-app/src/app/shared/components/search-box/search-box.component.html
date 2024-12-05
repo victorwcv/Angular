@@ -1,7 +1,9 @@
+<!-- (keyup.enter)="emitValue(txtInput.value)" -->
 <input
   type="text"
   [placeholder]="placeholder"
   class="w-full px-2 py-1 border-2 rounded-md outline-4 outline-offset-2 outline-indigo-500/80"
-  (keyup.enter)="emitValue(txtInput.value)"
+  (keyup)="onKeyPress(txtInput.value)"
   #txtInput
+  
 />
