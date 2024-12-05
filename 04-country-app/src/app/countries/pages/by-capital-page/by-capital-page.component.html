@@ -10,6 +10,8 @@
 
   <hr class="mb-6" />
 
+  <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+
   <div>
     <countries-table [countries]="countries"></countries-table>
   </div>
