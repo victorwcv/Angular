@@ -5,8 +5,12 @@
     <button
       *ngFor="let region of regions"
       (click)="searchByRegion(region)"
-      class="py-1 min-w-24 border-2 border-indigo-500 font-semibold rounded-md hover:bg-indigo-500 hover:text-white transition-colors bg-white"
-      [ngClass]="{'bg-indigo-500 text-white': selectedRegion === region}"
+      class="py-1 min-w-24 border-2 border-indigo-500 font-semibold rounded-md"
+      [ngClass]="
+        selectedRegion === region
+          ? 'bg-indigo-500 text-white'
+          : 'text-indigo-500 bg-transparent'
+      "
     >
       {{ region }}
     </button>
