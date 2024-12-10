@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country.interface';
 
@@ -6,10 +6,9 @@ import { Country } from '../../interfaces/country.interface';
   selector: 'app-by-capital-page',
   templateUrl: './by-capital-page.component.html',
 })
-export class ByCapitalPageComponent implements OnInit {
-
+export class ByCapitalPageComponent implements OnInit{
   public countries: Country[] = [];
-  public initialValue:string = "";
+  public initialValue: string = '';
   public isLoading: boolean = false;
 
   constructor(private countriesService: CountriesService) {}
@@ -27,6 +26,4 @@ export class ByCapitalPageComponent implements OnInit {
       this.isLoading = false;
     });
   }
-
-  
 }
