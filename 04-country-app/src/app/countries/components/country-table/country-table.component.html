@@ -3,32 +3,41 @@
 </div>
 
 <ng-template #table>
-  <table class="table-auto w-full p-4">
-    <thead class="border-b-2">
+  <table class="table-auto w-full border-collapse shadow-md rounded-lg overflow-hidden">
+    <thead class="bg-gray-800 text-white uppercase text-sm font-semibold">
       <tr>
-        <th class="px-2 py-1">#</th>
-        <th class="px-2 py-1">Bandera</th>
-        <th class="px-2 py-1">Nombre</th>
-        <th class="px-2 py-1">Capital</th>
-        <th class="px-2 py-1">Población</th>
-        <th class="px-2 py-1"></th>
+        <th class="w-12 px-4 py-3 text-center">#</th>
+        <th class="w-20 px-4 py-3 text-center">Bandera</th>
+        <th class="w-1/4 px-4 py-3 text-left">Nombre</th>
+        <th class="w-1/4 px-4 py-3 text-left">Capital</th>
+        <th class="w-1/4 px-4 py-3 text-right">Población</th>
+        <th class="w-28 px-4 py-3 text-center">Acción</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let item of countries; let i = index">
-        <td class="py-1 text-center">{{ i + 1 }}</td>
-        <td class="py-1 text-center">
+    <tbody class="bg-white divide-y divide-gray-200">
+      <tr *ngFor="let item of countries; let i = index" class="hover:bg-gray-100">
+        <td class="py-3 px-4 text-center font-medium">{{ i + 1 }}</td>
+        <td class="py-3 px-4 text-center">
           <img
             [src]="item.flags.png"
             [alt]="item.flags.alt"
-            class="w-8 h-auto m-auto"
+            class="w-10 h-auto rounded shadow-sm"
           />
         </td>
-        <td class="py-1 text-center">{{ item.name.common }}</td>
-        <td class="py-1 text-center">{{ item.capital }}</td>
-        <td class="py-1 text-center">{{ item.population | number }}</td>
-        <td>
-          <a [routerLink]="['/countries/by', item.cca3]" class="underline text-blue-600">
+        <td class="py-3 px-4 text-left font-semibold text-gray-700">
+          {{ item.name.common }}
+        </td>
+        <td class="py-3 px-4 text-left text-gray-600">
+          {{ item.capital }}
+        </td>
+        <td class="py-3 px-4 text-right text-gray-600">
+          {{ item.population | number }}
+        </td>
+        <td class="py-3 px-4 text-center">
+          <a
+            [routerLink]="['/countries/by', item.cca3]"
+            class="text-blue-600 hover:underline font-semibold"
+          >
             Info
           </a>
         </td>

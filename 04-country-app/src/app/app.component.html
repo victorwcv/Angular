@@ -1,9 +1,9 @@
-<section class="h-screen grid grid-cols-10">
-  <aside class="col-span-2 text-white bg-indigo-600 relative">
-    <shared-sidebar class="sticky top-0"></shared-sidebar>
+<section class="h-screen flex flex-wrap">
+  <aside class="min-w-72 max-w-72  text-white bg-indigo-600 relative">
+    <shared-sidebar></shared-sidebar>
   </aside>
 
-  <main class="col-span-8 bg-neutral-50">
+  <main class="flex-1 bg-neutral-50">
     <router-outlet></router-outlet>
   </main>
 </section>
