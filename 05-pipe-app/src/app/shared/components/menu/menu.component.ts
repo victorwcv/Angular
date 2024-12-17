@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -8,51 +9,30 @@ import { MenuItem } from 'primeng/api';
 export class MenuComponent {
   menuItems: MenuItem[] | undefined;
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     this.menuItems = [
       {
-        label: 'Home',
-        icon: 'pi pi-home',
-      },
-      {
-        label: 'Features',
-        icon: 'pi pi-star',
-      },
-      {
-        label: 'Projects',
-        icon: 'pi pi-search',
+        label: 'Pipes de Angular',
+        icon: 'pi pi-desktop',
         items: [
           {
-            label: 'Components',
-            icon: 'pi pi-bolt',
+            label: 'Textos y Fechas',
+            icon: 'pi pi-align-left',
+            routerLink: '/',
           },
           {
-            label: 'Blocks',
-            icon: 'pi pi-server',
+            label: 'Numeros',
+            icon: 'pi pi-dollar',
+            routerLink: 'numbers',
           },
           {
-            label: 'UI Kit',
-            icon: 'pi pi-pencil',
-          },
-          {
-            label: 'Templates',
-            icon: 'pi pi-palette',
-            items: [
-              {
-                label: 'Apollo',
-                icon: 'pi pi-palette',
-              },
-              {
-                label: 'Ultima',
-                icon: 'pi pi-palette',
-              },
-            ],
+            label: 'No comunes',
+            icon: 'pi pi-globe',
+            routerLink: 'commons',
           },
         ],
-      },
-      {
-        label: 'Contact',
-        icon: 'pi pi-envelope',  
       },
     ];
   }
