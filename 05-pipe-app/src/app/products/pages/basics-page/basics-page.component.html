@@ -30,13 +30,12 @@
         <li>fecha | date:'long'</li>
         <li>fecha | date:'MMMM'</li>
         <li>fecha | date:'dd MMMM, yyyy'</li>
-      </ol>
 
-      <hr />
+        <hr />
 
-      <ol>
         <li>fecha | date: 'long': 'GMT-4'</li>
         <li>fecha | date: 'long': 'GMT-5'</li>
+        <li>fecha | date: 'long': "" : 'es-PE'</li>
       </ol>
     </p-card>
   </div>
@@ -55,6 +54,7 @@
 
         <li>{{ customDate | date : "long" : "GMT-4" }}</li>
         <li>{{ customDate | date : "long" : "GMT-5" }}</li>
+        <li>{{ customDate | date : "long" : "" : "es-PE" }}</li>
       </ol>
     </p-card>
   </div>
