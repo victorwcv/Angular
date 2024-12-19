@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './basics-page.component.html',
 })
 export class BasicsPageComponent {
-  nameLower: string = 'fernando';
-  nameUpper: string = 'GONZALEZ';
-  nameTitle: string = 'esTO es UN TItulO';
+  nameLower = 'fernando';
+  nameUpper = 'GONZALEZ';
+  nameTitle = 'esTO es UN TItulO';
   customDate: Date = new Date();
 }
